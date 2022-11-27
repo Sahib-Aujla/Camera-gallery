@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+.video-cont{
+    height:100vh;
+    width:100vw;
+    background-color: rgb(14, 14, 13);
+}
+video{
+    height:100%;
+    width: 100%;
+}
+.actions-cont{
+/* background-color: burlywood; */
+position: absolute;
+top: calc(( 100vh - 15rem) /2);
+height: 15rem;
+width:5rem;
+right: 5rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.actions-cont > *{
+    height:5rem;
+    width:100%;
+    /* background-color:lightsalmon; */
+    border-radius: 50%;
+    border: 5px solid rgb(242, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.record-btn{
+background-color: red;
+height:3.7rem;
+width: 3.7rem;
+border-radius: 50%;
+}
+.capture-btn{
+    background-color: white;
+    height:3.7rem;
+width: 3.7rem;
+border-radius: 50%;
+}
+
+.scale-record{
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+
+}
+.scale-capture{
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+
+}
+
+@keyframes scale-record {
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes scale-capture {
+    0%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.timer-cont{
+    position: absolute;
+    bottom: 8rem;
+    left:4rem;
+    color:white;
+    font-size:1rem;
+}
+
+.timer{
+    display: none;
+}
+.filter-cont{
+    position: absolute;
+    top: calc( (100vh - 20rem) / 2 );
+    left:4rem;
+    height: 20rem;
+    width:5rem;
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.filter{
+   
+    height: 4rem;
+    background-image: url(https://picsum.photos/seed/picsum/200/300);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:color-burn ;
+}
+
+.red{
+    background-color: rgba(248, 5, 5, 0.345);
+}
+.blue{
+    background-color: rgba(9, 5, 248, 0.345);
+
+}
+.salmon{
+    background-color: rgba(5, 248, 29, 0.345);
+
+}
+.transparent{
+    background-color:transparent;
+
+}
+
+.filter-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.material-icons{
+    color:white;
+    font-size: 3.2rem;
+}
+
+.gallery{
+    position: absolute;
+    right: 6rem;
+    bottom: 2rem;
+    z-index: 2;
+
+}
+
+.gallery :hover{
+    cursor: pointer;
+}
